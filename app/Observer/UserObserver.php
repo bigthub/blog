@@ -2,13 +2,8 @@
 namespace App\Observers;
 use App\{Profile, User};
 
-class UserObserver
-{
-    /**
-     *
-     *
-     *
-    */
+class UserObserver{
+
     public function saved(User $user){
         if($user->has('profile')->count()==0){
             $profile = new Profile();
